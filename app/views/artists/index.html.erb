@@ -3,5 +3,6 @@
 <ul>
   <% @artists.each do |a| %>
     <li><%= link_to a.name, artist_path(a) %></li>
+       <%= link_to a.name, artist_path(a) %> (<%= pluralize(artist.songs.count, "song") %>)
   <% end %>
 </ul>
